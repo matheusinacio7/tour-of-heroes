@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+import { HEROES } from '../mock-heroes';
 import type { Hero } from '../hero';
 
 @Component({
@@ -11,6 +13,8 @@ export class HeroesComponent implements OnInit {
     id: 1,
     name: 'Windstorm',
   };
+
+  heroes = HEROES;
 
   constructor() { }
 
