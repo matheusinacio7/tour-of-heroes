@@ -9,10 +9,7 @@ import type { Hero } from '../hero';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm',
-  };
+  selectedHero?: Hero;
 
   heroes = HEROES;
 
@@ -21,4 +18,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
