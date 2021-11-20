@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, ci-cd/fix-app-name ]
 
   workflow_dispatch:
 
