@@ -27,6 +27,9 @@ jobs:
               password $HEROKU_API_KEY
             EOF
 
+      - name: Check file contents
+        run: cat ~/.netrc
+
       - name: Add Heroku remote
         run: heroku git:remote --app $HEROKU_APP_NAME
         env:
