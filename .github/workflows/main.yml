@@ -25,10 +25,7 @@ jobs:
             machine git.heroku.com
               login $HEROKU_EMAIL
               password $HEROKU_API_KEY
-            EOF
-
-      - name: Check file contents
-        run: cat ~/.netrc
+          EOF
 
       - name: Add Heroku remote
         run: heroku git:remote --app $HEROKU_APP_NAME
@@ -36,4 +33,4 @@ jobs:
           HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
 
       - name: Push to Heroku
-        run: git push heroku main:master
+        run: git push heroku master
