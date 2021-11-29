@@ -1,5 +1,16 @@
 <main>
   <section>
+    <h2>Add hero</h2>
+    <label for="new-hero">Hero name: </label>
+    <input type="text" id="new-hero" #heroName />
+    <button
+      class="add-button"
+      (click)="add(heroName.value); heroName.value=''"
+    >
+      Add {{ heroName.value }}
+    </button>
+  </section>
+  <section>
     <h2>My Heroes</h2>
     <ul class="heroes">
       <li *ngFor="let hero of heroes">
